@@ -90,7 +90,7 @@ export class TableOverviewExample implements OnInit {
       power: 13000,
       service: 'DFR'
     },{
-      id: '00000000-0003-4000-8007-000000000002',
+      id: '0003-4000-8007-000000000002',
       name: 'Willenhall',
       deviceType: 'LSES',
       site: 'Willenhall',
