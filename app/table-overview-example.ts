@@ -10,6 +10,8 @@ export interface DeviceData {
   maxImport: number;
   maxExport: number;
   organisation: string;
+  power: number;
+  service: string;
 }
 
 /**
@@ -21,7 +23,7 @@ export interface DeviceData {
   templateUrl: 'table-overview-example.html',
 })
 export class TableOverviewExample implements OnInit {
-  displayedColumns: string[] = ['deviceType', 'id', 'name', 'site',  'group', 'maxImport', 'maxExport', 'organisation'];
+  displayedColumns: string[] = ['deviceType', 'id', 'name', 'site',  'group', 'maxImport', 'maxExport', 'organisation', 'power', 'service'];
   dataSource: MatTableDataSource<DeviceData>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -37,8 +39,10 @@ export class TableOverviewExample implements OnInit {
       group: '',
       maxImport: -13000,
       maxExport: 13000,
-      organisation: 'EDF'
-    },
+      organisation: 'EDF',
+      power: 1245,
+      service: 'DFR'
+      },
     {
       id: '0003-4000-800e-000000000005',
       name: 'CH BYD2',
@@ -47,7 +51,9 @@ export class TableOverviewExample implements OnInit {
       group: '',
       maxImport: -13000,
       maxExport: 13000,
-      organisation: 'EDF'
+      organisation: 'EDF',
+      power: 13542,
+      service: 'DFR'
     },
     {
       id: '0003-4000-800e-000000000006',
@@ -57,7 +63,9 @@ export class TableOverviewExample implements OnInit {
       group: '',
       maxImport: -13000,
       maxExport: 13000,
-      organisation: 'EDF'
+      organisation: 'EDF',
+      power: 1242,
+      service: 'DFR'
     }
     ,{
       id: '0003-4000-800e-000000000007',
@@ -67,7 +75,9 @@ export class TableOverviewExample implements OnInit {
       group: '',
       maxImport: -13000,
       maxExport: 13000,
-      organisation: 'EDF'
+      organisation: 'EDF',
+      power: 95,
+      service: 'DFR'
     },{
       id: '0003-4000-800e-000000000008',
       name: 'CH BYD5',
@@ -76,7 +86,9 @@ export class TableOverviewExample implements OnInit {
       group: '',
       maxImport: -13000,
       maxExport: 13000,
-      organisation: 'EDF'
+      organisation: 'EDF',
+      power: 13000,
+      service: 'DFR'
     },{
       id: '00000000-0003-4000-8007-000000000002',
       name: 'Willenhall',
@@ -85,7 +97,9 @@ export class TableOverviewExample implements OnInit {
       group: '',
       maxImport: -1100000,
       maxExport: 550000,
-      organisation: 'Sheffield Uni'
+      organisation: 'Sheffield Uni',
+      power: 550000,
+      service: 'SFR'
     },
     {
       id: '0003-4000-800f-000000000001',
@@ -95,7 +109,9 @@ export class TableOverviewExample implements OnInit {
       group: '',
       maxImport: 0,
       maxExport: 50000,
-      organisation: 'Total'
+      organisation: 'Total',
+      power: 0,
+      service: 'Trading'
     },
     {
       id: '0006-4000-8008-000000000000',
@@ -105,7 +121,9 @@ export class TableOverviewExample implements OnInit {
       group: 'Generators',
       maxImport: 0,
       maxExport: 50000,
-      organisation: 'Arqiva'
+      organisation: 'Arqiva',
+      power: 0,
+      service: 'Triad'
     },
     {
       id: '0006-4000-8009-000000000000',
@@ -115,7 +133,9 @@ export class TableOverviewExample implements OnInit {
       group: 'Test',
       maxImport: 0,
       maxExport: 50000,
-      organisation: 'Upside'
+      organisation: 'Upside',
+      power: 50000,
+      service: 'Trading'
     },
     {
       id: '0006-4000-8009-000000000010',
@@ -125,7 +145,9 @@ export class TableOverviewExample implements OnInit {
       group: 'Main',
       maxImport: 0,
       maxExport: 5000000,
-      organisation: 'Shell'
+      organisation: 'Shell',
+      power: 5000000,
+      service: 'Trading'
     }
     ];
 

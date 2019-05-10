@@ -55,6 +55,18 @@
       <td mat-cell *matCellDef="let row"> <img src="{{getOrgIcon(row.organisation)}}" alt="{{row.organisation}}" width=40px/>  </td>
     </ng-container>
 
+  <!-- service Column -->
+    <ng-container matColumnDef="service">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Current Service </th>
+      <td mat-cell *matCellDef="let row"> {{row.service}} </td>
+    </ng-container>
+
+    <!-- power Column -->
+    <ng-container matColumnDef="power">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Current Power </th>
+      <td mat-cell *matCellDef="let row"> {{row.power}} </td>
+    </ng-container>
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;">
     </tr>
